@@ -24,8 +24,7 @@
 
 /* Estilos de los elementos */
 .header__logo {
-  max-width: 5%; /* La imagen nunca será más ancha que su contenedor */
-  height: auto;
+  width: 100px; /* Ancho del logo */
 }
 
 
