@@ -1,0 +1,43 @@
+:root {
+    --color-background-body: antiquewhite;
+    --color-background-header: rgba(44, 39, 39, 0.65);
+    --color-background-card: whitesmoke;
+    --color-border-card: #333;
+    --color-text-header: #fff;
+    --color-text-card: #222;
+    --color-primary: #3498db;
+    --color-secondary: #2ecc71;
+    --border-radius: 10px;
+    --box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    --font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Selector universal para todos los elementos */
+* {
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    box-sizing: border-box; /* Incluye el padding y borde en el tamaño total */
+    font-family: var(--font-family);
+}
+
+body {
+    background-color: var(--color-background-body);
+}
+
+/* ==========================================================================
+   Componente: Encabezado
+   ========================================================================== */
+/* Bloque principal del encabezado */
+.encabezado {
+    background-color: var(--color-background-header); /* Fondo gris oscuro translúcido */
+    padding: 20px; /* Espaciado interno */
+    color: var(--color-text-header); /* Texto blanco */
+    text-align: center; /* Centra el texto */
+    position: relative; /* Permite posicionar hijos absolutamente */
+    margin-bottom: 30px; /* Espacio inferior */
+}
+
+.encabezado__titulo {
+    margin: 0; /* Sin margen */
+}
+
