@@ -1,0 +1,221 @@
+* {
+    /* Selector universal que aplica estilos a todos los elementos */
+    margin: 0;
+    /* Elimina todos los márgenes externos de todos los elementos */
+    padding: 0;
+    /* Elimina todo el relleno interno de todos los elementos */
+    box-sizing: border-box;
+    /* Incluye padding y border en el ancho y alto total del elemento */
+}
+
+body {
+    /* Estilos para el elemento body (cuerpo de la página) */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Define la fuente principal como Segoe UI con fallbacks a otras fuentes sans-serif */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* Establece un fondo con gradiente lineal de azul a púrpura */
+    min-height: 100vh;
+    /* Asegura que el body tenga al menos la altura completa de la ventana */
+    color: #333;
+    /* Define el color del texto como un gris oscuro */
+}
+
+/* Contenedor principal */
+.container {
+    /* Estilos para el contenedor principal de la página */
+    max-width: 1200px;
+    /* Limita el ancho máximo a 1200px para pantallas grandes */
+    margin: 0 auto;
+    /* Centra el contenedor horizontalmente usando márgenes automáticos */
+    padding: 20px;
+    /* Agrega relleno interno de 20px en todos los lados */
+}
+
+/* Header */
+.header {
+    /* Estilos para el encabezado de la página */
+    text-align: center;
+    /* Centra todo el contenido del encabezado horizontalmente */
+    margin-bottom: 50px;
+    /* Agrega margen inferior de 50px para separar del siguiente elemento */
+    padding: 40px 0;
+    /* Agrega relleno interno de 40px vertical y 0 horizontal */
+}
+
+.header__title {
+    /* Estilos para el título principal del encabezado */
+    font-size: 3rem;
+    /* Establece el tamaño de fuente como 3 veces el tamaño base */
+    color: white;
+    /* Define el color del texto como blanco */
+    margin-bottom: 10px;
+    /* Agrega margen inferior de 10px para separar del subtítulo */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    /* Agrega una sombra de texto para mejor contraste */
+}
+
+.header__subtitle {
+    /* Estilos para el subtítulo del encabezado */
+    font-size: 1.2rem;
+    /* Establece el tamaño de fuente como 1.2 veces el tamaño base */
+    color: rgba(255,255,255,0.9);
+    /* Define el color del texto como blanco con 90% de opacidad */
+    font-weight: 300;
+    /* Hace que el texto sea ligero */
+}
+
+/* Menú principal */
+.menu {
+    /* Estilos para la sección del menú principal */
+    margin-top: 40px;
+    /* Agrega margen superior de 40px para separar del encabezado */
+}
+
+.menu__list {
+    /* Estilos para la lista del menú principal */
+    list-style: none;
+    /* Elimina los marcadores de lista (puntos) */
+    text-align: center;
+    /* Centra todo el contenido horizontalmente */
+}
+
+.menu__item {
+    /* Estilos para cada elemento del menú principal */
+    display: inline-block;
+    /* Hace que cada ítem se comporte como un bloque en línea */
+    width: 280px;
+    /* Establece un ancho fijo de 280px para cada ítem */
+    margin: 15px;
+    /* Agrega margen de 15px en todos los lados para separar los elementos */
+    vertical-align: top;
+    /* Alinea los elementos en la parte superior */
+}
+
+.menu__link {
+    /* Estilos para los enlaces del menú principal */
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    color: inherit;
+    /* Hereda el color del texto del elemento padre */
+    display: block;
+    /* Hace que cada enlace ocupe todo el ancho disponible */
+}
+
+.menu__card {
+    /* Estilos para las tarjetas del menú principal */
+    background: white;
+    /* Establece el fondo de las tarjetas como blanco */
+    border-radius: 15px;
+    /* Redondea las esquinas de las tarjetas con un radio de 15px */
+    padding: 30px 20px;
+    /* Agrega relleno interno de 30px vertical y 20px horizontal */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    /* Agrega una sombra sutil debajo de las tarjetas */
+    transition: all 0.3s ease;
+    /* Aplica una transición suave de 0.3s para todos los cambios */
+    position: relative;
+    /* Establece posicionamiento relativo para elementos absolutos internos */
+    overflow: hidden;
+    /* Oculta cualquier contenido que se salga de las tarjetas */
+}
+
+.menu__card::before {
+    /* Pseudo-elemento que crea una línea decorativa en la parte superior */
+    content: '';
+    /* Define el contenido del pseudo-elemento como vacío */
+    position: absolute;
+    /* Posiciona el elemento de forma absoluta */
+    top: 0;
+    /* Lo coloca en la parte superior */
+    left: 0;
+    /* Lo coloca en el borde izquierdo */
+    right: 0;
+    /* Se extiende hasta el borde derecho */
+    height: 4px;
+    /* Establece la altura de la línea en 4px */
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    /* Crea un gradiente lineal de azul a púrpura */
+}
+
+.menu__card:hover {
+    /* Estilos aplicados cuando el cursor está sobre las tarjetas */
+    transform: translateY(-10px);
+    /* Mueve la tarjeta 10px hacia arriba para un efecto de elevación */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    /* Aumenta la sombra para crear un efecto de profundidad */
+}
+
+.menu__card-title {
+    /* Estilos para los títulos de las tarjetas del menú */
+    font-size: 1.5rem;
+    /* Establece el tamaño de fuente como 1.5 veces el tamaño base */
+    color: #333;
+    /* Define el color del texto como un gris oscuro */
+    margin-bottom: 10px;
+    /* Agrega margen inferior de 10px para separar de la descripción */
+    font-weight: 600;
+    /* Hace que el texto sea semi-negrita */
+}
+
+.menu__card-description {
+    /* Estilos para las descripciones de las tarjetas del menú */
+    color: #666;
+    /* Define el color del texto como un gris medio */
+    font-size: 0.95rem;
+    /* Establece el tamaño de fuente como 0.95 veces el tamaño base */
+    line-height: 1.5;
+    /* Establece la altura de línea para mejor legibilidad */
+}
+
+/* Componente de formulario de contacto */
+.contact {
+    /* Estilos para la sección de contacto */
+    margin-top: 80px;
+    /* Agrega margen superior de 80px para separar del menú */
+    padding: 60px 0;
+    /* Agrega relleno interno de 60px vertical y 0 horizontal */
+}
+
+.contact__container {
+    /* Estilos para el contenedor del formulario de contacto */
+    max-width: 600px;
+    /* Limita el ancho máximo a 600px para el formulario */
+    margin: 0 auto;
+    /* Centra el contenedor horizontalmente */
+    background: white;
+    /* Establece el fondo del contenedor como blanco */
+    border-radius: 20px;
+    /* Redondea las esquinas del contenedor con un radio de 20px */
+    padding: 40px;
+    /* Agrega relleno interno de 40px en todos los lados */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    /* Agrega una sombra sutil debajo del contenedor */
+}
+
+.contact__title {
+    /* Estilos para el título del formulario de contacto */
+    font-size: 2.5rem;
+    /* Establece el tamaño de fuente como 2.5 veces el tamaño base */
+    color: #333;
+    /* Define el color del texto como un gris oscuro */
+    text-align: center;
+    /* Centra el texto horizontalmente */
+    margin-bottom: 15px;
+    /* Agrega margen inferior de 15px para separar de la descripción */
+    font-weight: 600;
+    /* Hace que el texto sea semi-negrita */
+}
+
+.contact__description {
+    /* Estilos para la descripción del formulario */
+    text-align: center;
+    /* Centra el texto horizontalmente */
+    color: #666;
+    /* Define el color del texto como un gris medio */
+    font-size: 1.1rem;
+    /* Establece el tamaño de fuente como 1.1 veces el tamaño base */
+    margin-bottom: 40px;
+    /* Agrega margen inferior de 40px para separar del formulario */
+    line-height: 1.6;
+    /* Establece la altura de línea para mejor legibilidad */
+}
