@@ -1,8 +1,8 @@
 :root {
   --color-primary: #3498db; /* Color primario */
   --color-secondary: #2ecc71; /* Color secundario */
-  --color-text: #333; /* Color del texto */
-  --color-background: #f4f4f4; /* Color de fondo */
+  --color-text: #ffffff; /* Color del texto */
+  --color-background: #c01414; /* Color de fondo */
   
 }
 
@@ -18,16 +18,14 @@
   justify-content: space-between; /* Distribuye el espacio: el logo a la izquierda y el menú a la derecha */
   align-items: center; /* Alinea los ítems verticalmente al centro */
   
-  background-color: #f4f4f4;
+  background-color: var(--color-background); /* Color de fondo del header */
   padding: 1rem 2rem;
 }
 
 /* Estilos de los elementos */
 .header__logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: #333;
+  max-width: 5%; /* La imagen nunca será más ancha que su contenedor */
+  height: auto;
 }
 
 
@@ -40,17 +38,17 @@
   gap: 1.5rem; /* Crea un espacio entre los ítems */
 }
 
-.header__item {
-  /* No se necesitan propiedades flex aquí */
-}
 
 .header__link {
   text-decoration: none;
-  color: #555;
+  color: var(--color-text); /* Color del texto */
   padding: 0.5rem;
   transition: color 0.3s ease;
+  font-weight: bold;
+  font-size: 17px;
+  
 }
 
 .header__link:hover {
-  color: #000;
+  color: var(--color-primary); /* Cambia el color al pasar el mouse */
 }
