@@ -9,7 +9,7 @@
     --color-principal: #0056b3;
     --color-texto: #333;
     --tamano-icono: 40px;
-        --color-primary: #3498db;
+    --color-primary: #3498db;
     --color-background: #fff;
 }
 
@@ -37,6 +37,8 @@
 }
 .tabs__header-link:hover {
   color: var(--color-secondary);
+
+}
 
 /* Sección */
 .seccion {
