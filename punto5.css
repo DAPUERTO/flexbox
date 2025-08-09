@@ -1,0 +1,74 @@
+/* Selector universal y variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-principal: #0056b3;
+    --color-texto: #333;
+    --tamano-icono: 40px;
+        --color-primary: #3498db;
+    --color-background: #fff;
+}
+
+.header {
+  display: flex;
+  background: var(--color-primary);
+  color: var(--color-background);
+  padding: 1rem 2rem;
+  text-align: center;
+}
+.header__title {
+  color: var(--color-background);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.tabs__header-link {
+  color: var(--color-background);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+.tabs__header-link:hover {
+  color: var(--color-secondary);
+
+/* Sección */
+.seccion {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Encabezado */
+.encabezado {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.icono {
+    width: var(--tamano-icono);
+    height: var(--tamano-icono);
+    margin-right: 10px;
+}
+
+.titulo {
+    color: var(--color-principal);
+    font-size: 1.5rem;
+}
+
+/* Texto justificado */
+.descripcion {
+    text-align: justify;
+    color: var(--color-texto);
+    font-size: 1rem;
+    line-height: 1.5;
+}
