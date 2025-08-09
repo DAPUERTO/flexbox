@@ -1,0 +1,109 @@
+:root {
+    --color-background-body: rgb(140, 197, 103);
+    --color-background-header: rgba(44, 39, 39, 0.65);
+    --color-background-card: whitesmoke;
+    --color-border-card: #333;
+    --color-text-header: #fff;
+    --color-text-card: #222;
+    --color-primary: #3498db;
+    --color-secondary: #2ecc71;
+    --border-radius: 10px;
+    --box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    --font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Selector universal para todos los elementos */
+* {
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    box-sizing: border-box; /* Incluye el padding y borde en el tamaño total */
+    font-family: var(--font-family);
+}
+
+body {
+    background-color: var(--color-background-body);
+}
+
+/* ==========================================================================
+   Componente: Encabezado
+   ========================================================================== */
+/* Bloque principal del encabezado */
+.encabezado {
+    background-color: var(--color-background-header); /* Fondo gris oscuro translúcido */
+    padding: 20px; /* Espaciado interno */
+    color: var(--color-text-header); /* Texto blanco */
+    text-align: center; /* Centra el texto */
+    position: relative; /* Permite posicionar hijos absolutamente */
+    margin-bottom: 30px; /* Espacio inferior */
+}
+
+.encabezado__titulo {
+    margin: 0; /* Sin margen */
+}
+
+.encabezado__volver {
+    position: absolute; /* Posiciona el enlace de forma absoluta */
+    left: 20px; /* Distancia desde la izquierda */
+    top: 50%; /* Centrado vertical */
+    transform: translateY(-50%); /* Ajuste fino de centrado vertical */
+    font-weight: bold; /* Texto en negrita */
+    text-decoration: none; /* Sin subrayado */
+    color: var(--color-text-header); /* Texto blanco */
+    border: 2px solid var(--color-text-header); /* Borde blanco */
+    padding: 8px 15px; /* Espaciado interno */
+    background-color: transparent; /* Fondo transparente */
+    border-radius: var(--border-radius); /* Bordes redondeados */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+.encabezado__volver:hover,
+.encabezado__volver:focus {
+    background-color: var(--color-text-header); /* Fondo blanco al pasar el mouse */
+    color: var(--color-background-header); /* Texto oscuro al pasar el mouse */
+}
+
+/* ==========================================================================
+   Componente: Galería
+   ========================================================================== */
+.galeria {
+    padding: 0 20px; /* Espaciado horizontal */
+}
+
+.galeria__contenedor {
+    display: flex; /* Activa Flexbox */
+    flex-wrap: wrap; /* Permite que las tarjetas bajen a otra línea */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 20px; /* Espacio entre tarjetas */
+    align-items: stretch; /* Estira las tarjetas para igualar alturas */
+}
+
+/* ==========================================================================
+   Componente: Tarjeta de Imagen
+   ========================================================================== */
+.tarjeta-imagen {
+    display: flex; /* Cada tarjeta es un flex container */
+    flex-direction: column; /* Elementos en columna */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: flex-start; /* Arranca desde arriba */
+    width: 250px;
+    height: 400px;
+    background-color: var(--color-background-card);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--color-border-card);
+    overflow: hidden;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+.tarjeta-imagen__imagen {
+    width: 100%; /* Ocupa todo el ancho */
+    height: 85%; /* Ocupa el 85% de la altura */
+    object-fit: cover; /* Ajusta la imagen sin deformarla */
+    border-bottom: 1px solid var(--color-border-card); /* Línea divisoria inferior */
+}
+
+.tarjeta-imagen__titulo {
+    margin-top: 15px; /* Espacio superior */
+    font-size: 1.1em; /* Tamaño de fuente */
+    color: var(--color-text-card);
+}

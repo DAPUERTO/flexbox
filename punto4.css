@@ -1,0 +1,103 @@
+/* ===== Selector universal ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Variables en :root ===== */
+:root {
+    --color-fondo: #f9f9f9;
+    --color-borde: #ccc;
+    --color-principal: #3498db;
+    --color-texto: #333;
+    --espaciado: 1rem;
+    --radio-borde: 5px;
+    --fuente: Arial, sans-serif;
+    --color-primary: #3498db;
+    --color-background: #fff;
+}
+
+.header {
+  display: flex;
+  background: var(--color-primary);
+  color: var(--color-background);
+  padding: 1rem 2rem;
+  text-align: center;
+}
+.header__title {
+  color: var(--color-background);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.tabs__header-link {
+  color: var(--color-background);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+.tabs__header-link:hover {
+  color: var(--color-secondary);
+}
+
+/* ===== Bloque principal ===== */
+.formulario-contacto {
+    background: var(--color-fondo);
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: var(--espaciado);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    font-family: var(--fuente);
+    display: grid;
+    gap: var(--espaciado);
+}
+
+/* ===== Elementos ===== */
+.formulario-contacto__titulo {
+    text-align: center;
+    color: var(--color-principal);
+}
+
+.formulario-contacto__grupo {
+    display: grid;
+    grid-template-columns: 100px 1fr; /* Columna para etiqueta y otra para campo */
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.formulario-contacto__etiqueta {
+    font-weight: bold;
+    color: var(--color-texto);
+}
+
+.formulario-contacto__campo {
+    padding: 0.5rem;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-borde);
+    font-size: 1rem;
+}
+
+.formulario-contacto__campo:focus {
+    outline: none;
+    border-color: var(--color-principal);
+}
+
+.formulario-contacto__boton {
+    grid-column: 1 / -1; /* Ocupa todas las columnas */
+    background: var(--color-principal);
+    color: white;
+    padding: 0.7rem;
+    border: none;
+    border-radius: var(--radio-borde);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.formulario-contacto__boton:hover {
+    background: #2980b9;
+}

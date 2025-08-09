@@ -1,0 +1,53 @@
+:root {
+  --color-primary: #3498db; /* Color primario */
+  --color-secondary: #2ecc71; /* Color secundario */
+  --color-text: #ffffff; /* Color del texto */
+  --color-background: #c01414; /* Color de fondo */
+  
+}
+
+* {
+  box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho y alto total de los elementos */
+  margin: 0; /* Elimina el margen por defecto */
+  padding: 0; /* Elimina el padding por defecto */
+}
+
+/* Bloque principal: el contenedor flex */
+.header {
+  display: flex; /* Hacemos que el header sea un contenedor flex */
+  justify-content: space-between; /* Distribuye el espacio: el logo a la izquierda y el menú a la derecha */
+  align-items: center; /* Alinea los ítems verticalmente al centro */
+  
+  background-color: var(--color-background); /* Color de fondo del header */
+  padding: 1rem 2rem;
+}
+
+/* Estilos de los elementos */
+.header__logo {
+  width: 100px; /* Ancho del logo */
+}
+
+
+
+.header__list {
+  display: flex; /* Hacemos que la lista sea un contenedor flex para alinear los ítems */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 1.5rem; /* Crea un espacio entre los ítems */
+}
+
+
+.header__link {
+  text-decoration: none;
+  color: var(--color-text); /* Color del texto */
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+  font-weight: bold;
+  font-size: 17px;
+  
+}
+
+.header__link:hover {
+  color: var(--color-primary); /* Cambia el color al pasar el mouse */
+}
