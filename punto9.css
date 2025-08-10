@@ -1,0 +1,116 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables globales */
+:root {
+  --color-primary: #3498db;
+  --color-text: #333;
+  --color-bg: #f9f9f9;
+  --color-card-bg: #fff;
+  --color-button-text: #fff;
+  --padding-section: 2rem;
+  --gap-cards: 1.5rem;
+  --border-radius: 0px;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --font-family: Arial, sans-serif;
+  --color-primary: #3498db;
+  --color-background: #fff;
+}
+
+.header {
+  display: flex;
+  background: var(--color-primary);
+  color: var(--color-background);
+  padding: 1rem 2rem;
+  text-align: center;
+}
+.header__title {
+  color: var(--color-background);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.tabs__header-link {
+  color: var(--color-background);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+.tabs__header-link:hover {
+  color: var(--color-secondary); 
+}
+
+
+/* Bloque principal */
+.precios {
+  background-color: var(--color-bg);
+  padding: var(--padding-section);
+  font-family: var(--font-family);
+  text-align: center;
+}
+
+.precio__titulo {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--color-text);
+}
+
+/* Contenedor de tarjetas */
+.precio__cards {
+  display: flex;
+  justify-content: center;
+  gap: var(--gap-cards);
+  flex-wrap: wrap;
+}
+
+/* Tarjeta */
+.precio__card {
+  background-color: var(--color-card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  width: 280px;
+}
+
+.precio__card-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.precio__card-precio {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+/* Lista de características */
+.precio__card-features {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.precio__card-feature {
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+/* Botón */
+.precio__card-button {
+  background-color: var(--color-primary);
+  color: var(--color-button-text);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.precio__card-button:hover {
+  opacity: 0.9;
+}
