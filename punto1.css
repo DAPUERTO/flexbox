@@ -1,53 +1,52 @@
+/* Variables CSS para colores principales del sitio */
 :root {
-  --color-primary: #3498db; /* Color primario */
-  --color-secondary: #2ecc71; /* Color secundario */
-  --color-text: #ffffff; /* Color del texto */
-  --color-background: #c01414; /* Color de fondo */
-  
+  --color-primary: #3498db; /* Color primario (azul) */
+  --color-secondary: #2ecc71; /* Color secundario (verde) */
+  --color-text: #ffffff; /* Color del texto (blanco) */
+  --color-background: #c01414; /* Color de fondo (rojo) */
 }
 
+/* Reset de estilos por defecto y box-sizing para todos los elementos */
 * {
-  box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho y alto total de los elementos */
-  margin: 0; /* Elimina el margen por defecto */
-  padding: 0; /* Elimina el padding por defecto */
+  box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+  margin: 0; /* Elimina márgenes por defecto */
+  padding: 0; /* Elimina relleno por defecto */
 }
 
-/* Bloque principal: el contenedor flex */
+/* Estilos para el header principal */
 .header {
-  display: flex; /* Hacemos que el header sea un contenedor flex */
-  justify-content: space-between; /* Distribuye el espacio: el logo a la izquierda y el menú a la derecha */
-  align-items: center; /* Alinea los ítems verticalmente al centro */
-  
-  background-color: var(--color-background); /* Color de fondo del header */
-  padding: 1rem 2rem;
+  display: flex; /* Usa Flexbox para el layout */
+  justify-content: space-between; /* Espacia logo y menú a los extremos */
+  align-items: center; /* Centra verticalmente los elementos */
+  background-color: var(--color-background); /* Fondo del header */
+  padding: 1rem 2rem; /* Espaciado interno */
 }
 
-/* Estilos de los elementos */
+/* Estilo para el logo */
 .header__logo {
-  width: 100px; /* Ancho del logo */
+  width: 100px; /* Ancho fijo del logo */
 }
 
-
-
+/* Estilos para la lista de navegación */
 .header__list {
-  display: flex; /* Hacemos que la lista sea un contenedor flex para alinear los ítems */
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 1.5rem; /* Crea un espacio entre los ítems */
+  display: flex; /* Usa Flexbox para los ítems del menú */
+  list-style: none; /* Quita los puntos de la lista */
+  padding: 0; /* Sin relleno */
+  margin: 0; /* Sin margen */
+  gap: 1.5rem; /* Espacio entre los ítems */
 }
 
-
+/* Estilos para los enlaces del menú */
 .header__link {
-  text-decoration: none;
+  text-decoration: none; /* Quita el subrayado */
   color: var(--color-text); /* Color del texto */
-  padding: 0.5rem;
-  transition: color 0.3s ease;
-  font-weight: bold;
-  font-size: 17px;
-  
+  padding: 0.5rem; /* Espaciado interno */
+  transition: color 0.3s ease; /* Transición suave al cambiar color */
+  font-weight: bold; /* Texto en negrita */
+  font-size: 17px; /* Tamaño de fuente */
 }
 
+/* Efecto hover para los enlaces del menú */
 .header__link:hover {
   color: var(--color-primary); /* Cambia el color al pasar el mouse */
 }

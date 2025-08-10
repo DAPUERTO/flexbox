@@ -1,4 +1,5 @@
 /* ===== Selector universal ===== */
+/* Elimina márgenes y rellenos por defecto y usa el modelo de caja border-box */
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +7,7 @@
 }
 
 /* ===== Variables en :root ===== */
+/* Define variables CSS para colores, fuentes y espaciados */
 :root {
     --color-fondo: #f9f9f9;
     --color-borde: #ccc;
@@ -18,6 +20,8 @@
     --color-background: #fff;
 }
 
+/* ===== Estilos para el encabezado ===== */
+/* Usa flexbox para alinear el contenido del header */
 .header {
   display: flex;
   background: var(--color-primary);
@@ -25,6 +29,8 @@
   padding: 1rem 2rem;
   text-align: center;
 }
+
+/* Título del header */
 .header__title {
   color: var(--color-background);
   text-decoration: none;
@@ -33,6 +39,7 @@
   transition: color 0.3s;
 }
 
+/* Enlace de volver en el header */
 .tabs__header-link {
   color: var(--color-background);
   text-decoration: none;
@@ -40,11 +47,14 @@
   font-size: 1.2rem;
   transition: color 0.3s;
 }
+
+/* Efecto hover para el enlace */
 .tabs__header-link:hover {
   color: var(--color-secondary);
 }
 
-/* ===== Bloque principal ===== */
+/* ===== Bloque principal del formulario ===== */
+/* Estilos generales del formulario */
 .formulario-contacto {
     background: var(--color-fondo);
     max-width: 400px;
@@ -57,24 +67,28 @@
     gap: var(--espaciado);
 }
 
-/* ===== Elementos ===== */
+/* ===== Elementos internos del formulario ===== */
+/* Título del formulario */
 .formulario-contacto__titulo {
     text-align: center;
     color: var(--color-principal);
 }
 
+/* Grupo de cada campo del formulario */
 .formulario-contacto__grupo {
     display: grid;
-    grid-template-columns: 100px 1fr; /* Columna para etiqueta y otra para campo */
+    grid-template-columns: 100px 1fr; /* Etiqueta y campo */
     align-items: center;
     gap: 0.5rem;
 }
 
+/* Etiquetas de los campos */
 .formulario-contacto__etiqueta {
     font-weight: bold;
     color: var(--color-texto);
 }
 
+/* Campos de entrada y textarea */
 .formulario-contacto__campo {
     padding: 0.5rem;
     border: 1px solid var(--color-borde);
@@ -82,13 +96,15 @@
     font-size: 1rem;
 }
 
+/* Efecto al enfocar los campos */
 .formulario-contacto__campo:focus {
     outline: none;
     border-color: var(--color-principal);
 }
 
+/* Botón de enviar */
 .formulario-contacto__boton {
-    grid-column: 1 / -1; /* Ocupa todas las columnas */
+    grid-column: 1 / -1; /* Ocupa todas las columnas del grid */
     background: var(--color-principal);
     color: white;
     padding: 0.7rem;
@@ -98,6 +114,7 @@
     font-size: 1rem;
 }
 
+/* Efecto hover para el botón */
 .formulario-contacto__boton:hover {
     background: #2980b9;
 }
