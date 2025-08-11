@@ -1,18 +1,22 @@
 /* Selector universal y variables */
+/* Elimina márgenes y rellenos por defecto y usa el modelo de caja border-box */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Variables CSS para colores y tamaños */
 :root {
-    --color-principal: #0056b3;
-    --color-texto: #333;
-    --tamano-icono: 40px;
-    --color-primary: #3498db;
-    --color-background: #fff;
+    --color-principal: #0056b3;      /* Color principal para títulos */
+    --color-texto: #333;             /* Color del texto general */
+    --tamano-icono: 40px;            /* Tamaño de los iconos */
+    --color-primary: #3498db;        /* Color primario para el header */
+    --color-background: #fff;        /* Color de fondo */
 }
 
+/* ===== Estilos para el encabezado ===== */
+/* Header principal con flexbox para alinear elementos */
 .header {
   display: flex;
   background: var(--color-primary);
@@ -20,6 +24,8 @@
   padding: 1rem 2rem;
   text-align: center;
 }
+
+/* Título del header */
 .header__title {
   color: var(--color-background);
   text-decoration: none;
@@ -28,6 +34,7 @@
   transition: color 0.3s;
 }
 
+/* Enlace de volver en el header */
 .tabs__header-link {
   color: var(--color-background);
   text-decoration: none;
@@ -35,12 +42,14 @@
   font-size: 1.2rem;
   transition: color 0.3s;
 }
+
+/* Efecto hover para el enlace */
 .tabs__header-link:hover {
   color: var(--color-secondary);
-
 }
 
-/* Sección */
+/* ===== Estilos para la sección principal ===== */
+/* Contenedor de la sección */
 .seccion {
     max-width: 800px;
     margin: 20px auto;
@@ -49,25 +58,27 @@
     border-radius: 8px;
 }
 
-/* Encabezado */
+/* Encabezado de la sección con imagen y título alineados */
 .encabezado {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
 
+/* Imagen del icono */
 .icono {
     width: var(--tamano-icono);
     height: var(--tamano-icono);
     margin-right: 10px;
 }
 
+/* Título de la sección */
 .titulo {
     color: var(--color-principal);
     font-size: 1.5rem;
 }
 
-/* Texto justificado */
+/* Descripción de la sección, texto justificado */
 .descripcion {
     text-align: justify;
     color: var(--color-texto);

@@ -1,4 +1,5 @@
 /* Reset básico */
+/* Elimina márgenes y rellenos por defecto y usa el modelo de caja border-box */
 * {
   margin: 0;
   padding: 0;
@@ -6,21 +7,23 @@
 }
 
 /* Variables */
+/* Define variables CSS para colores, tamaños y fuentes */
 :root {
-  --color-fondo: #f5f5f5;
-  --color-borde: #ccc;
-  --color-texto: #333;
-  --color-blanco: #fff;
-  --ancho-maximo: 300px;
-  --espaciado: 15px;
-  --radio-borde: 5px;
-  --padding-item: 10px;
-  --fuente: Arial, sans-serif;
-  --color-primary: #3498db;
-  --color-background: #fff;
+  --color-fondo: #f5f5f5;         /* Color de fondo general */
+  --color-borde: #ccc;            /* Color de borde para los ítems */
+  --color-texto: #333;            /* Color principal del texto */
+  --color-blanco: #fff;           /* Color blanco para fondos */
+  --ancho-maximo: 300px;          /* Ancho máximo de la lista */
+  --espaciado: 15px;              /* Espaciado general */
+  --radio-borde: 5px;             /* Radio de borde para esquinas redondeadas */
+  --padding-item: 10px;           /* Relleno interno de los ítems */
+  --fuente: Arial, sans-serif;    /* Fuente principal */
+  --color-primary: #3498db;       /* Color primario para el header */
+  --color-background: #fff;       /* Color de fondo para el header */
 }
 
 /* Bloque lista */
+/* Estilos generales del body */
 body {
   font-family: var(--fuente);
   background-color: var(--color-fondo);
@@ -28,6 +31,7 @@ body {
   padding: 20px;
 }
 
+/* Encabezado principal con flexbox */
 .header {
   display: flex;
   background: var(--color-primary);
@@ -35,6 +39,8 @@ body {
   padding: 1rem 2rem;
   text-align: center;
 }
+
+/* Título del header */
 .header__title {
   color: var(--color-background);
   text-decoration: none;
@@ -43,6 +49,7 @@ body {
   transition: color 0.3s;
 }
 
+/* Enlace de volver en el header */
 .tabs__header-link {
   color: var(--color-background);
   text-decoration: none;
@@ -50,15 +57,20 @@ body {
   font-size: 1.2rem;
   transition: color 0.3s;
 }
+
+/* Efecto hover para el enlace */
 .tabs__header-link:hover {
   color: var(--color-secondary);
 }
 
+/* Título de la lista de tareas */
 .lista__titulo {
   color: var(--color-texto);
   margin-bottom: var(--espaciado);
 }
 
+/* Lista de tareas */
+/* Flex column para alinear los ítems verticalmente y centrados */
 .lista {
   list-style: none;
   padding: 0;
@@ -70,6 +82,8 @@ body {
   max-width: var(--ancho-maximo);
 }
 
+/* Ítems de la lista */
+/* Fondo blanco, borde y esquinas redondeadas */
 .lista__item {
   background-color: var(--color-blanco);
   padding: var(--padding-item);
@@ -79,6 +93,7 @@ body {
   border-radius: var(--radio-borde);
 }
 
+/* Casilla de verificación de la lista */
 .lista__checkbox {
   margin-right: 8px;
 }
