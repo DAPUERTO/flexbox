@@ -75,6 +75,10 @@
   color: var(--color-texto-footer);
   padding: var(--padding-footer);
   font-family: var(--fuente-footer);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 /* Cada columna del footer */
