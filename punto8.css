@@ -1,25 +1,25 @@
-/* Reset básico */
+/* Reset básico: elimina márgenes y paddings por defecto y ajusta el box-sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Variables */
+/* Variables CSS para colores, fuentes y tamaños reutilizables */
 :root {
-  --color-primary: #3498db;
-  --color-background: #fff;
-  --color-fondo-footer: #000000;
-  --color-texto-footer: #fff;
-  --color-link-footer: #ffffff;
-  --padding-footer: 20px;
-  --fuente-footer: Arial, sans-serif;
-  --ancho-avatar: 40px;
-  --radio-avatar: 50%;
-  --espaciado: 5px;
-
+  --color-primary: #3498db; /* Color principal (header) */
+  --color-background: #fff; /* Fondo general */
+  --color-fondo-footer: #000000; /* Fondo del footer */
+  --color-texto-footer: #fff; /* Texto del footer */
+  --color-link-footer: #ffffff; /* Color de enlaces en el footer */
+  --padding-footer: 20px; /* Espaciado interno del footer */
+  --fuente-footer: Arial, sans-serif; /* Fuente del footer */
+  --ancho-avatar: 40px; /* Tamaño del avatar/bandera */
+  --radio-avatar: 50%; /* Bordes redondeados para el avatar */
+  --espaciado: 5px; /* Espaciado general */
 }
 
+/* Estilos para el header */
 .header {
   display: flex;
   background: var(--color-primary);
@@ -35,6 +35,7 @@
   transition: color 0.3s;
 }
 
+/* Enlace de regreso en el header */
 .tabs__header-link {
   color: var(--color-background);
   text-decoration: none;
@@ -43,9 +44,10 @@
   transition: color 0.3s;
 }
 .tabs__header-link:hover {
-  color: var(--color-secondary); 
+  color: var(--color-secondary); /* Color al pasar el mouse (variable no definida) */
 }
 
+/* Imagen de región/idioma (avatar/bandera) */
 .footer__region {
   width: var(--ancho-avatar);
   height: var(--ancho-avatar);
@@ -54,17 +56,18 @@
   margin-right: var(--espaciado);
 }
 
+/* Contenedor de idioma/región en el footer */
 .footer__lenguages{
     display: flex;
     align-items: center;
 }
 
+/* Texto del idioma en el footer */
 .footer__lenguage-text{
     margin-left: 15px;
 }
 
-
-/* Bloque footer */
+/* Contenedor principal del footer con tres columnas */
 .footer {
   display: flex;
   justify-content: space-between;
@@ -74,35 +77,41 @@
   font-family: var(--fuente-footer);
 }
 
-/* Elementos del footer */
+/* Cada columna del footer */
 .footer__column {
   flex: 1;
   padding: 0 10px;
 }
 
+/* Título de cada columna del footer */
 .footer__title {
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
+/* Texto general del footer */
 .footer__text {
   font-size: 0.9rem;
   line-height: 1.4;
 }
 
+/* Lista de enlaces en el footer */
 .footer__list {
   list-style: none;
 }
 
+/* Elemento individual de la lista de enlaces */
 .footer__list-item {
   margin-bottom: 5px;
 }
 
+/* Enlaces del footer */
 .footer__link {
   color: var(--color-link-footer);
   text-decoration: none;
 }
 
+/* Efecto hover en los enlaces del footer */
 .footer__link:hover {
   text-decoration: underline;
 }

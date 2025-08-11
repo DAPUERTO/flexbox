@@ -1,26 +1,26 @@
-/* Reset básico */
+/* Reset básico: elimina márgenes y paddings por defecto y define el modelo de caja */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Variables globales */
+/* Variables globales para colores, fuentes y espaciamiento */
 :root {
-  --color-primary: #3498db;
-  --color-text: #333;
-  --color-bg: #f9f9f9;
-  --color-card-bg: #fff;
-  --color-button-text: #fff;
-  --padding-section: 2rem;
-  --gap-cards: 1.5rem;
-  --border-radius: 0px;
-  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  --font-family: Arial, sans-serif;
-  --color-primary: #3498db;
-  --color-background: #fff;
+  --color-primary: #3498db;         /* Color principal (azul) */
+  --color-text: #333;               /* Color de texto principal */
+  --color-bg: #f9f9f9;              /* Fondo de la sección de precios */
+  --color-card-bg: #fff;            /* Fondo de las tarjetas */
+  --color-button-text: #fff;        /* Color del texto de los botones */
+  --padding-section: 2rem;          /* Espaciado interno de la sección */
+  --gap-cards: 1.5rem;              /* Espacio entre tarjetas */
+  --border-radius: 0px;             /* Bordes rectos */
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para tarjetas */
+  --font-family: Arial, sans-serif; /* Fuente principal */
+  --color-background: #fff;         /* Color de fondo para header y textos */
 }
 
+/* Estilos para el encabezado */
 .header {
   display: flex;
   background: var(--color-primary);
@@ -28,6 +28,8 @@
   padding: 1rem 2rem;
   text-align: center;
 }
+
+/* Título del encabezado */
 .header__title {
   color: var(--color-background);
   text-decoration: none;
@@ -36,6 +38,7 @@
   transition: color 0.3s;
 }
 
+/* Enlace de volver en el header */
 .tabs__header-link {
   color: var(--color-background);
   text-decoration: none;
@@ -44,11 +47,10 @@
   transition: color 0.3s;
 }
 .tabs__header-link:hover {
-  color: var(--color-secondary); 
+  color: var(--color-secondary); /* Cambia de color al pasar el mouse (variable no definida) */
 }
 
-
-/* Bloque principal */
+/* Sección principal de precios */
 .precios {
   background-color: var(--color-bg);
   padding: var(--padding-section);
@@ -56,13 +58,14 @@
   text-align: center;
 }
 
+/* Título de la sección de precios */
 .precio__titulo {
   font-size: 2rem;
   margin-bottom: 2rem;
   color: var(--color-text);
 }
 
-/* Contenedor de tarjetas */
+/* Contenedor de las tarjetas de precios */
 .precio__cards {
   display: flex;
   justify-content: center;
@@ -70,7 +73,7 @@
   flex-wrap: wrap;
 }
 
-/* Tarjeta */
+/* Tarjeta individual de precio */
 .precio__card {
   background-color: var(--color-card-bg);
   border-radius: var(--border-radius);
@@ -79,29 +82,32 @@
   width: 280px;
 }
 
+/* Título del plan */
 .precio__card-title {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
+/* Precio del plan */
 .precio__card-precio {
   font-size: 1.25rem;
   color: var(--color-primary);
   margin-bottom: 1rem;
 }
 
-/* Lista de características */
+/* Lista de características del plan */
 .precio__card-features {
   list-style: none;
   margin-bottom: 1.5rem;
 }
 
+/* Elemento individual de la lista de características */
 .precio__card-feature {
   margin-bottom: 0.5rem;
   color: var(--color-text);
 }
 
-/* Botón */
+/* Botón para elegir el plan */
 .precio__card-button {
   background-color: var(--color-primary);
   color: var(--color-button-text);
@@ -111,6 +117,7 @@
   cursor: pointer;
 }
 
+/* Efecto hover en el botón */
 .precio__card-button:hover {
   opacity: 0.9;
 }

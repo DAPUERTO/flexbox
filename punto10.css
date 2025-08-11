@@ -1,21 +1,22 @@
-/* Reset básico */
+/* Reset básico: elimina márgenes y rellenos por defecto y ajusta el modelo de caja */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Variables */
+/* Variables CSS para colores, fuentes y tamaños */
 :root {
-  --color-bg-sidebar: #2c3e50;
-  --color-text: #ffffff;
-  --color-hover: #3498db;
-  --fuente-sidebar: Arial, sans-serif;
-  --ancho-sidebar: 220px;
-  --color-primary: #3498db;
-  --color-background: #ffffff;
+  --color-bg-sidebar: #2c3e50;      /* Fondo de la barra lateral */
+  --color-text: #ffffff;            /* Color de texto general */
+  --color-hover: #3498db;           /* Color al pasar el mouse */
+  --fuente-sidebar: Arial, sans-serif; /* Fuente de la barra lateral */
+  --ancho-sidebar: 220px;           /* Ancho de la barra lateral */
+  --color-primary: #3498db;         /* Color principal (header) */
+  --color-background: #ffffff;      /* Fondo general */
 }
 
+/* Estilos para el encabezado */
 .header {
   display: flex;
   background: var(--color-primary);
@@ -23,6 +24,8 @@
   padding: 1rem 2rem;
   text-align: center;
 }
+
+/* Título del encabezado */
 .header__title {
   color: var(--color-background);
   text-decoration: none;
@@ -31,6 +34,7 @@
   transition: color 0.3s;
 }
 
+/* Enlace de volver en el header */
 .tabs__header-link {
   color: var(--color-background);
   text-decoration: none;
@@ -38,12 +42,13 @@
   font-size: 1.2rem;
   transition: color 0.3s;
 }
+
+/* Efecto hover para el enlace de volver */
 .tabs__header-link:hover {
   color: var(--color-secondary); 
 }
 
-
-/* Bloque principal */
+/* Barra lateral principal */
 .sidebar {
   width: var(--ancho-sidebar);
   height: 100vh;
@@ -54,11 +59,12 @@
   padding: 1rem 0;
 }
 
-/* Elementos de navegación */
+/* Navegación dentro de la barra lateral */
 .sidebar__nav {
   flex: 1;
 }
 
+/* Lista de navegación de la barra lateral */
 .sidebar__list {
   list-style: none;
   display: flex;
@@ -67,10 +73,12 @@
   height: 100%;
 }
 
+/* Elemento individual de la lista */
 .sidebar__item {
   text-align: center;
 }
 
+/* Enlaces de la barra lateral */
 .sidebar__link {
   display: block;
   padding: 1rem;
@@ -80,6 +88,7 @@
   transition: background-color 0.3s;
 }
 
+/* Efecto hover para los enlaces de la barra lateral */
 .sidebar__link:hover {
   background-color: var(--color-hover);
 }
